@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="ATELIER — fashion, reimagined. A motion-rich clothing store demo."><title>ATELIER — Wear Your Story</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#171713;--paper:#f5f3ee;--muted:#77766e;--lime:#d6f36a;--line:#dedbd2;--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',Arial,sans-serif}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);overflow-x:hidden}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}.announcement{background:var(--ink);color:#fff;text-align:center;padding:10px;font-size:10px;letter-spacing:.16em;text-transform:uppercase}.nav{height:76px;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:sticky;top:0;background:#f5f3eeeF;backdrop-filter:blur(14px);z-index:20}.logo{font-size:25px;font-weight:700;letter-spacing:-.09em}.logo span{color:#8cae28}.navlinks{display:flex;gap:30px;font-size:12px}.navlinks a{position:relative}.navlinks a:after{content:'';position:absolute;left:0;bottom:-7px;width:0;height:1px;background:var(--ink);transition:.3s}.navlinks a:hover:after{width:100%}.navright{display:flex;gap:18px;align-items:center;font-size:12px}.pill{border:1px solid var(--ink);border-radius:30px;padding:11px 18px;background:var(--ink);color:white;transition:.25s}.pill:hover{background:var(--lime);color:var(--ink);border-color:var(--lime)}.menu{display:none;background:none;border:0;font-size:23px}.hero{padding:34px 5vw 60px;position:relative}.hero-top{display:flex;justify-content:space-between;align-items:end;margin-bottom:20px}.eyebrow{font-size:10px;letter-spacing:.19em;text-transform:uppercase;color:var(--muted)}h1{font:600 clamp(52px,8vw,118px)/.91 var(--serif);letter-spacing:-.065em;margin:18px 0 0;max-width:760px}.hero-copy{max-width:230px;font-size:12px;line-height:1.8;color:var(--muted);margin-bottom:8px}.hero-image{height:min(68vw,650px);min-height:390px;position:relative;overflow:hidden;border-radius:4px;background:#d2d0c8}.hero-image img{width:100%;height:115%;object-fit:cover;object-position:center 40%;transform:translateY(0);transition:transform .2s linear;filter:saturate(.82)}.hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,#10100c55,transparent 65%)}.hero-label{position:absolute;left:5%;bottom:9%;color:white}.hero-label small{letter-spacing:.18em;text-transform:uppercase;font-size:10px}.hero-label h2{font:500 clamp(35px,5vw,70px)/1 var(--serif);margin:12px 0 22px}.round-arrow{display:inline-flex;width:48px;height:48px;border:1px solid #ffffff99;border-radius:50%;align-items:center;justify-content:center;font-size:20px;transition:.3s}.round-arrow:hover{background:var(--lime);color:var(--ink);border-color:var(--lime)}.hero-index{position:absolute;right:5%;bottom:8%;color:white;font-size:11px;letter-spacing:.15em}.ticker{overflow:hidden;background:var(--lime);padding:17px 0;white-space:nowrap}.ticker-track{display:inline-flex;gap:32px;animation:marquee 28s linear infinite;font:500 23px var(--serif)}.ticker-track span{display:inline-flex;gap:32px;align-items:center}.ticker b{font:normal 16px var(--sans)}@keyframes marquee{to{transform:translateX(-50%)}}section{padding:100px 5vw}.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:35px}.section-head h2{font:500 clamp(36px,5vw,66px)/1 var(--serif);letter-spacing:-.05em;margin:10px 0 0}.section-head p{font-size:12px;color:var(--muted);max-width:220px;line-height:1.7}.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.cat{position:relative;height:390px;overflow:hidden;background:#ddd;border-radius:3px}.cat img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1);filter:saturate(.82)}.cat:hover img{transform:scale(1.08)}.cat:after{content:'';position:absolute;inset:40% 0 0;background:linear-gradient(transparent,#0008)}.cat-info{position:absolute;z-index:1;bottom:20px;left:20px;color:white}.cat-info small{font-size:9px;letter-spacing:.16em;text-transform:uppercase}.cat-info h3{font:500 30px var(--serif);margin:6px 0}.cat-info span{font-size:11px}.products{background:#eeece5}.filters{display:flex;gap:8px;flex-wrap:wrap}.filter{border:1px solid #c9c6bc;background:transparent;border-radius:30px;padding:9px 15px;font-size:11px}.filter.active,.filter:hover{background:var(--ink);color:white;border-color:var(--ink)}.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.product{min-width:0}.product-photo{height:340px;position:relative;overflow:hidden;background:#dedbd3}.product-photo img{width:100%;height:100%;object-fit:cover;transition:transform .7s}.product:hover .product-photo img{transform:scale(1.06)}.tag{position:absolute;top:12px;left:12px;background:var(--lime);padding:7px 10px;border-radius:20px;font-size:9px;text-transform:uppercase;letter-spacing:.1em}.quick{position:absolute;bottom:12px;left:12px;right:12px;background:#f5f3eeed;border:0;padding:13px;border-radius:2px;font-size:11px;transform:translateY(60px);transition:.3s}.product:hover .quick{transform:translateY(0)}.product-meta{display:flex;justify-content:space-between;gap:10px;padding:13px 0;font-size:12px}.product-meta small{display:block;color:var(--muted);margin-top:5px}.price{font-weight:700;white-space:nowrap}.editorial{display:grid;grid-template-columns:1fr 1fr;min-height:580px;background:#1c211a;color:white;padding:0}.editorial-img{min-height:500px;overflow:hidden}.editorial-img img{width:100%;height:100%;object-fit:cover;transition:transform 1s}.editorial-img:hover img{transform:scale(1.04)}.editorial-copy{padding:9vw 8vw;display:flex;flex-direction:column;justify-content:center}.editorial-copy h2{font:500 clamp(40px,5vw,70px)/1.03 var(--serif);letter-spacing:-.05em;margin:20px 0}.editorial-copy p{color:#c4c7bc;line-height:1.9;font-size:12px;max-width:330px;margin-bottom:28px}.editorial-copy .pill{align-self:flex-start;background:var(--lime);color:var(--ink);border-color:var(--lime)}.benefits{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:30px 5vw;gap:20px}.benefit{display:flex;gap:12px;align-items:center}.benefit strong{font-size:11px}.benefit small{display:block;color:var(--muted);font-size:10px;margin-top:4px}.benefit i{font-style:normal;font-size:21px}.story{display:grid;grid-template-columns:1fr 1fr;gap:8vw;align-items:center}.story h2{font:500 clamp(38px,5vw,64px)/1.04 var(--serif);letter-spacing:-.05em;margin:15px 0}.story p{font-size:12px;color:var(--muted);line-height:1.9;max-width:420px}.story-visual{height:440px;position:relative}.story-visual img{width:78%;height:100%;object-fit:cover;margin-left:22%}.story-stamp{position:absolute;left:0;bottom:25px;background:var(--lime);width:130px;height:130px;border-radius:50%;display:grid;place-items:center;text-align:center;font:500 19px var(--serif);transform:rotate(-12deg)}.newsletter{background:var(--lime);text-align:center;padding:80px 5vw}.newsletter h2{font:500 clamp(38px,5vw,66px) var(--serif);margin:12px 0}.newsletter p{font-size:12px}.subscribe{display:flex;max-width:430px;margin:25px auto 0;border-bottom:1px solid var(--ink)}.subscribe input{flex:1;min-width:0;background:none;border:0;padding:14px 0;outline:0}.subscribe button{background:none;border:0;font-weight:700}footer{background:var(--ink);color:white;padding:60px 5vw 25px}.foot-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px;padding-bottom:55px}.foot-brand .logo{font-size:35px}.foot-brand p{font-size:11px;color:#aaa;max-width:240px;line-height:1.8}.foot-col strong{font-size:10px;letter-spacing:.15em;text-transform:uppercase}.foot-col a{display:block;color:#aaa;font-size:11px;margin-top:15px}.foot-bottom{border-top:1px solid #444;padding-top:20px;display:flex;justify-content:space-between;color:#999;font-size:10px}.wa{position:fixed;right:22px;bottom:22px;z-index:40;display:flex;align-items:center;gap:10px}.wa-label{background:white;box-shadow:0 5px 25px #0002;padding:11px 15px;border-radius:30px;font-size:11px}.wa-btn{width:54px;height:54px;border-radius:50%;display:grid;place-items:center;background:#20c66b;color:white;font-size:26px;box-shadow:0 8px 25px #0003;transition:.25s}.wa-btn:hover{transform:scale(1.1)}.chat-panel{position:fixed;right:22px;bottom:90px;width:300px;background:white;z-index:39;box-shadow:0 12px 50px #0002;border-radius:12px;overflow:hidden;display:none}.chat-panel.open{display:block;animation:pop .25s ease}.chat-head{background:#128c53;color:white;padding:16px;font-size:13px;font-weight:700}.chat-head small{display:block;font-weight:400;margin-top:4px;opacity:.8}.chat-body{padding:18px;font-size:12px;line-height:1.6}.chat-body p{background:#f0f3ef;padding:12px;border-radius:10px}.chat-send{display:block;text-align:center;background:#20c66b;color:white;padding:12px;margin:0 15px 15px;border-radius:25px;font-size:12px}.toast{position:fixed;bottom:25px;left:50%;transform:translate(-50%,20px);background:var(--ink);color:white;padding:13px 20px;border-radius:30px;font-size:12px;opacity:0;transition:.3s;z-index:60}.toast.show{opacity:1;transform:translate(-50%,0)}.reveal{opacity:0;transform:translateY(35px);transition:opacity .8s,transform .8s}.reveal.visible{opacity:1;transform:none}@keyframes pop{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media(max-width:850px){.navlinks{display:none;position:absolute;top:76px;left:0;right:0;background:var(--paper);padding:25px 5vw;flex-direction:column;gap:20px;border-bottom:1px solid var(--line)}.navlinks.open{display:flex}.menu{display:block}.navright .account{display:none}.categories{grid-template-columns:repeat(2,1fr)}.cat{height:330px}.product-grid{grid-template-columns:repeat(2,1fr)}.product-photo{height:300px}.editorial{grid-template-columns:1fr}.editorial-img{height:420px}.editorial-copy{padding:60px 8vw}.benefits{grid-template-columns:repeat(2,1fr)}.foot-top{grid-template-columns:1fr 1fr}.hero-top{align-items:start;flex-direction:column;gap:20px}.hero-copy{max-width:360px}.story{grid-template-columns:1fr}.story-visual{height:380px}}
+@media(max-width:480px){.nav{height:65px}.navlinks{top:65px}.navright{gap:10px}.hero{padding-top:25px}.hero-image{min-height:470px;height:125vw}.categories{gap:8px}.cat{height:250px}.cat-info{left:13px;bottom:14px}.cat-info h3{font-size:24px}.product-photo{height:235px}.quick{transform:none;padding:10px}.section-head{align-items:start;flex-direction:column;gap:10px}.benefits{padding:25px 5vw;gap:25px 10px}.benefit{align-items:start}.benefit i{font-size:18px}.story-visual{height:300px}.foot-top{grid-template-columns:1fr 1fr}.foot-brand{grid-column:1/-1}.foot-bottom{gap:12px;flex-direction:column}.wa-label{display:none}}
+</style><style id="fx-style">
+:root{--gold:#b8975a;--ivory:#f5f3ee}
+html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!important}.lenis.lenis-stopped{overflow:hidden}
+.fx-loader{position:fixed;inset:0;z-index:9999;background:#0d0d0a;color:var(--ivory);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;border-bottom-left-radius:0 0;border-bottom-right-radius:0 0}
+.fx-loader-logo{font:600 clamp(40px,9vw,110px)/1 var(--serif);letter-spacing:-.06em;display:flex;overflow:hidden;padding:0 .1em .12em}.fx-loader-logo span{display:inline-block}.fx-loader-logo .d{color:var(--gold)}
+.fx-loader-bar{width:min(260px,56vw);height:1px;background:#ffffff26;overflow:hidden}.fx-loader-bar i{display:block;height:100%;background:var(--gold);transform:scaleX(0);transform-origin:left}
+.fx-loader-num{font-size:11px;letter-spacing:.3em;color:#ffffff99}
+.fx-progress{position:fixed;left:0;top:0;height:2px;width:100%;background:linear-gradient(90deg,var(--gold),#e7d3a3);transform:scaleX(0);transform-origin:left;z-index:60;pointer-events:none}
+.fx-w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.14em;margin-bottom:-.14em}.fx-c{display:inline-block;will-change:transform}
+.fx-grad{position:absolute;inset:-20%;background:radial-gradient(40% 50% at 20% 30%,#b8975a66,transparent 70%),radial-gradient(45% 55% at 80% 70%,#d6f36a33,transparent 70%),radial-gradient(35% 45% at 55% 20%,#f5f3ee22,transparent 70%);mix-blend-mode:soft-light;animation:fxgrad 14s ease-in-out infinite alternate;pointer-events:none}
+@keyframes fxgrad{to{transform:translate3d(8%,-6%,0) rotate(12deg) scale(1.15)}}
+.hero-image{transform-style:preserve-3d;will-change:transform}
+.fx-cursor,.fx-ring{position:fixed;left:0;top:0;pointer-events:none;z-index:9998;border-radius:50%;mix-blend-mode:difference;display:none}
+.fx-cursor{width:7px;height:7px;background:#fff;margin:-3.5px 0 0 -3.5px}.fx-ring{width:38px;height:38px;border:1px solid #fff;margin:-19px 0 0 -19px}
+@media(hover:hover) and (pointer:fine){.fx-on .fx-cursor,.fx-on .fx-ring{display:block}.fx-on,.fx-on a,.fx-on button{cursor:none}}
+.fx-edit{background:#0d0d0a;color:var(--ivory);padding:0;position:relative;overflow:hidden}
+.fx-edit-pin{height:100vh;min-height:560px;padding:96px 0 34px;display:flex;flex-direction:column;justify-content:space-between;position:relative}
+.fx-edit-head{padding:0 5vw;display:flex;justify-content:space-between;align-items:end}.fx-edit-head .eyebrow{color:var(--gold)}
+.fx-edit-head h2{font:500 clamp(38px,6vw,86px)/1 var(--serif);letter-spacing:-.05em;margin:10px 0 0}.fx-edit-head p{font-size:12px;color:#ffffff99;max-width:210px;line-height:1.7;margin:0}
+.fx-track{display:flex;gap:3vw;padding:0 5vw;width:max-content;align-items:flex-end;flex:1;min-height:0;margin:20px 0}
+.fx-panel{width:clamp(250px,30vw,440px);height:100%;display:flex;flex-direction:column;gap:14px;flex:none}
+.fx-frame{position:relative;flex:1;min-height:0;overflow:hidden;background:#1d1d17;border-radius:3px}.fx-frame img{position:absolute;top:0;left:-12%;width:124%;height:100%;object-fit:cover;filter:saturate(.8) contrast(1.05)}
+.fx-frame:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,#0d0d0acc)}
+.fx-meta{display:flex;align-items:baseline;gap:14px}.fx-meta b{font:500 12px var(--sans);letter-spacing:.2em;color:var(--gold)}.fx-meta h3{font:500 clamp(22px,2.4vw,34px)/1 var(--serif);margin:0;letter-spacing:-.03em}
+.fx-edit-prog{margin:0 5vw;height:1px;background:#ffffff26}.fx-edit-prog i{display:block;height:100%;background:var(--gold);transform:scaleX(0);transform-origin:left}
+.fx-wave{position:absolute;left:0;width:100%;height:110px;z-index:3;pointer-events:none;display:block}.fx-wave.t{top:-1px}.fx-wave.b{bottom:-1px}.fx-wave path{fill:var(--paper)}
+.product-photo{will-change:transform}
+@media(max-width:850px){.fx-edit-head p{display:none}.fx-panel{width:68vw}.fx-wave{height:60px}}
+@media(prefers-reduced-motion:reduce){.fx-grad{animation:none}.fx-edit-pin{height:auto}.fx-track{overflow-x:auto;width:auto}.fx-wave,.fx-loader{display:none}}
+</style>
+
+<style id="performance-overrides">
+  html { scroll-behavior: smooth; }
+  body { overflow-x: clip; }
+  .reveal { opacity: 1; transform: none; }
+  .reveal.visible { opacity: 1; transform: none; }
+  .fx-edit { overflow: hidden; }
+  .fx-edit-pin {
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 76px 0 34px !important;
+    display: block !important;
+  }
+  .fx-edit-head { margin-bottom: 28px; }
+  .fx-track {
+    display: flex !important;
+    width: 100% !important;
+    max-width: 100%;
+    height: auto;
+    min-height: 0 !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--gold) #ffffff22;
+    padding: 8px 5vw 20px !important;
+    gap: 18px !important;
+    margin: 0 0 18px !important;
+    align-items: stretch !important;
+  }
+  .fx-track::-webkit-scrollbar { height: 5px; }
+  .fx-track::-webkit-scrollbar-track { background: #ffffff22; }
+  .fx-track::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; }
+  .fx-panel {
+    flex: 0 0 clamp(240px, 31vw, 390px) !important;
+    width: clamp(240px, 31vw, 390px) !important;
+    height: auto !important;
+    min-height: 0 !important;
+    scroll-snap-align: start;
+    gap: 12px !important;
+  }
+  .fx-frame {
+    height: clamp(300px, 43vw, 480px) !important;
+    min-height: 0 !important;
+    flex: none !important;
+    border-radius: 5px;
+    transform: translate3d(var(--mx,0),var(--my,0),0);
+    transition: transform .25s ease;
+  }
+  .fx-frame img { transform: none !important; }
+  .fx-edit-prog { margin-top: 10px; }
+  .fx-wave { display: none !important; }
+  .fx-grad { animation: none !important; }
+  .hero-image, .product-photo { will-change: auto !important; }
+  .cat img, .product-photo img, .editorial-img img { will-change: auto; }
+  .cat, .product-photo { transform: translate3d(var(--mx,0),var(--my,0),0); transition: transform .25s ease; }
+  .fx-loader, .fx-cursor, .fx-ring { display: none !important; }
+  @media (max-width:850px) {
+    .fx-edit-pin { padding: 58px 0 28px !important; }
+    .fx-track { gap: 14px !important; }
+    .fx-panel { flex-basis: 76vw !important; width: 76vw !important; }
+    .fx-frame { height: 390px !important; }
+  }
+  @media (max-width:480px) {
+    .fx-panel { flex-basis: 82vw !important; width: 82vw !important; }
+    .fx-frame { height: 340px !important; }
+    .fx-edit-head h2 { font-size: 48px; }
+  }
+  @media (prefers-reduced-motion:reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+  }
+</style>
+</head>
+<body>
+<div class="announcement">Complimentary shipping on orders over ₹2,499 &nbsp; · &nbsp; New season, new stories</div>
+<header class="nav"><a class="logo" href="#home">ATELIER<span>.</span></a><nav class="navlinks" id="navlinks"><a href="#collections">Collections</a><a href="#shop">Shop</a><a href="#story">Our story</a><a href="#contact">Contact</a></nav><div class="navright"><a class="account" href="#shop">Account</a><a href="#shop">Bag (<span id="bagCount">0</span>)</a><a class="pill" href="#contact">Get in touch ↗</a><button class="menu" id="menu" aria-label="Open menu">☰</button></div></header>
+<main id="home"><div class="hero"><div class="hero-top"><div><div class="eyebrow">Independent fashion · Est. 2024</div><h1>Wear your<br><em>own story.</em></h1></div><p class="hero-copy">Thoughtful pieces. Beautiful details. A wardrobe that feels like you — every single day.</p></div><div class="hero-image" id="heroImage"><img id="heroPhoto" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=2000&q=85" onerror="this.src='https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=2000&q=85'" alt="Fashion editorial campaign"><div class="hero-overlay"></div><div class="hero-label"><small>New season · 2026 collection</small><h2>Made to move.<br>Made to matter.</h2><a class="round-arrow" href="#shop">↘</a></div><div class="hero-index">01 — 04 &nbsp; / &nbsp; THE NEW EDIT</div></div></div>
+<div class="ticker"><div class="ticker-track"><span>STYLE THAT STAYS <b>✳</b> MADE FOR EVERY DAY <b>✳</b> FIND YOUR FIT <b>✳</b> STYLE THAT STAYS <b>✳</b> MADE FOR EVERY DAY <b>✳</b> FIND YOUR FIT <b>✳</b></span><span>STYLE THAT STAYS <b>✳</b> MADE FOR EVERY DAY <b>✳</b> FIND YOUR FIT <b>✳</b> STYLE THAT STAYS <b>✳</b> MADE FOR EVERY DAY <b>✳</b> FIND YOUR FIT <b>✳</b></span></div></div>
+<section id="collections"><div class="section-head reveal"><div><div class="eyebrow">Find your frequency</div><h2>Shop by category.</h2></div><p>From everyday essentials to the pieces that make an entrance.</p></div><div class="categories"><a class="cat reveal" href="#shop"><img loading="lazy" src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80" alt="Women's fashion"><div class="cat-info"><small>01 / The edit</small><h3>Women</h3><span>Explore collection ↗</span></div></a><a class="cat reveal" href="#shop"><img loading="lazy" src="https://images.unsplash.com/photo-1516826957135-700dedea698c?auto=format&fit=crop&w=800&q=80" alt="Men's fashion"><div class="cat-info"><small>02 / The edit</small><h3>Men</h3><span>Explore collection ↗</span></div></a><a class="cat reveal" href="#shop"><img loading="lazy" src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=80" alt="Kids clothing"><div class="cat-info"><small>03 / The edit</small><h3>Kids</h3><span>Explore collection ↗</span></div></a><a class="cat reveal" href="#shop"><img loading="lazy" src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=800&q=80" alt="Shoes and accessories"><div class="cat-info"><small>04 / The edit</small><h3>Accessories</h3><span>Explore collection ↗</span></div></a></div></section>
+<section class="fx-edit" id="edit"><svg class="fx-wave t" viewBox="0 0 1440 110" preserveAspectRatio="none" aria-hidden="true"><path d=""/></svg><div class="fx-edit-pin"><div class="fx-edit-head"><div><div class="eyebrow">Ten worlds · One wardrobe</div><h2>The edit.</h2></div><p>Keep scrolling — the collection travels sideways.</p></div><div class="fx-track"><article class="fx-panel"><div class="fx-frame"><img src="https://images.unsplash.com/photo-1516826957135-700dedea698c?auto=format&fit=crop&w=900&q=80" alt="Men's Fashion" style="object-position:center"></div><div class="fx-meta"><b>01</b><h3>Men's Fashion</h3></div></article><article class="fx-panel"><div class="fx-frame"><img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80" alt="Women's Fashion" style="object-position:30% center"></div><div class="fx-meta"><b>02</b><h3>Women's Fashion</h3></div></article><article class="fx-panel"><div class="fx-frame"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80" alt="Luxury Streetwear" style="object-position:70% center"></div><div class="fx-meta"><b>03</b><h3>Luxury Streetwear</h3></div></article><article class="fx-panel"><div class="fx-frame"><img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=900&q=80" alt="Ethnic Wear" style="object-position:center"></div><div class="fx-meta"><b>04</b><h3>Ethnic Wear</h3></div></article><article class="fx-panel"><div class="fx-frame"><img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=900&q=80" alt="Casual Wear" style="object-position:30% center"></div><div class="fx-meta"><b>05</b><h3>Casual Wear</h3></div></article><article class="fx-panel"><div class="fx-frame"><img src="https://images.unsplash.com/photo-1516826957135-700dedea698c?auto=format&fit=crop&w=900&q=80" alt="Formal Wear" style="object-position:70% center"></div><div class="fx-meta"><b>06</b><h3>Formal Wear</h3></div></article><article class="fx-panel"><div class="fx-frame"><img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80" alt="Sportswear" style="object-position:center"></div><div class="fx-meta"><b>07</b><h3>Sportswear</h3></div></article><article class="fx-panel"><div class="fx-frame"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80" alt="Footwear" style="object-position:30% center"></div><div class="fx-meta"><b>08</b><h3>Footwear</h3></div></article><article class="fx-panel"><div class="fx-frame"><img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=900&q=80" alt="Accessories" style="object-position:70% center"></div><div class="fx-meta"><b>09</b><h3>Accessories</h3></div></article><article class="fx-panel"><div class="fx-frame"><img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=900&q=80" alt="Seasonal Collections" style="object-position:center"></div><div class="fx-meta"><b>10</b><h3>Seasonal Collections</h3></div></article></div><div class="fx-edit-prog"><i></i></div></div><svg class="fx-wave b" viewBox="0 0 1440 110" preserveAspectRatio="none" aria-hidden="true"><path d=""/></svg></section>
+<section class="products" id="shop"><div class="section-head reveal"><div><div class="eyebrow">Curated for you</div><h2>The latest & greatest.</h2></div><div class="filters"><button class="filter active" data-filter="all">All pieces</button><button class="filter" data-filter="women">Women</button><button class="filter" data-filter="men">Men</button><button class="filter" data-filter="ethnic">Ethnic</button><button class="filter" data-filter="sport">Activewear</button></div></div><div class="product-grid" id="productGrid">
+<article class="product reveal" data-category="women"><div class="product-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=700&q=80" alt="Sculpted everyday dress"><span class="tag">Bestseller</span><button class="quick" data-name="Sculpted Everyday Dress">Quick add +</button></div><div class="product-meta"><div>Sculpted Everyday Dress<small>Women · Soft cotton</small></div><span class="price">₹2,499</span></div></article>
+<article class="product reveal" data-category="men"><div class="product-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=700&q=80" alt="Essential relaxed shirt"><span class="tag">New</span><button class="quick" data-name="Essential Relaxed Shirt">Quick add +</button></div><div class="product-meta"><div>Essential Relaxed Shirt<small>Men · Linen blend</small></div><span class="price">₹1,899</span></div></article>
+<article class="product reveal" data-category="ethnic"><div class="product-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=700&q=80" alt="Modern festive set"><span class="tag">Limited</span><button class="quick" data-name="Modern Festive Set">Quick add +</button></div><div class="product-meta"><div>Modern Festive Set<small>Ethnic · Occasion wear</small></div><span class="price">₹3,299</span></div></article>
+<article class="product reveal" data-category="sport"><div class="product-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=700&q=80" alt="Motion active set"><span class="tag">Popular</span><button class="quick" data-name="Motion Active Set">Quick add +</button></div><div class="product-meta"><div>Motion Active Set<small>Activewear · Stretch fit</small></div><span class="price">₹2,199</span></div></article>
+<article class="product reveal" data-category="women"><div class="product-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?auto=format&fit=crop&w=700&q=80" alt="Wide leg tailored trousers"><button class="quick" data-name="Wide-Leg Tailored Trousers">Quick add +</button></div><div class="product-meta"><div>Wide-Leg Tailored Trousers<small>Women · Everyday edit</small></div><span class="price">₹1,799</span></div></article>
+<article class="product reveal" data-category="men"><div class="product-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=80" alt="Classic cotton tee"><button class="quick" data-name="Classic Cotton Tee">Quick add +</button></div><div class="product-meta"><div>Classic Cotton Tee<small>Men · Organic cotton</small></div><span class="price">₹899</span></div></article>
+<article class="product reveal" data-category="ethnic"><div class="product-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1583391733956-6c78276477e8?auto=format&fit=crop&w=700&q=80" alt="Handcrafted kurta"><button class="quick" data-name="Handcrafted Kurta">Quick add +</button></div><div class="product-meta"><div>Handcrafted Kurta<small>Ethnic · Hand-finished</small></div><span class="price">₹2,799</span></div></article>
+<article class="product reveal" data-category="sport"><div class="product-photo"><img loading="lazy" src="https://images.unsplash.com/photo-1506629905607-d9a3d8b8b4a8?auto=format&fit=crop&w=700&q=80" alt="Performance layer"><button class="quick" data-name="Performance Layer">Quick add +</button></div><div class="product-meta"><div>Performance Layer<small>Activewear · Breathable</small></div><span class="price">₹1,599</span></div></article>
+</div></section>
+<div class="editorial"><div class="editorial-img"><img loading="lazy" src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=85" alt="Fashion campaign portrait"></div><div class="editorial-copy reveal"><div class="eyebrow" style="color:#d6f36a">The ATELIER point of view</div><h2>Less noise.<br><em>More you.</em></h2><p>We believe getting dressed should feel effortless. We bring together considered design, comfortable fabrics and timeless silhouettes — made to fit your real life.</p><a class="pill" href="#story">Discover our story ↗</a></div></div>
+<div class="benefits"><div class="benefit"><i>✳</i><div><strong>Free shipping</strong><small>On orders above ₹2,499</small></div></div><div class="benefit"><i>↺</i><div><strong>Easy returns</strong><small>7-day return window</small></div></div><div class="benefit"><i>♧</i><div><strong>Thoughtful fabrics</strong><small>Comfort comes first</small></div></div><div class="benefit"><i>♡</i><div><strong>Made with care</strong><small>Quality in every detail</small></div></div></div>
+<section class="story" id="story"><div class="reveal"><div class="eyebrow">A little about us</div><h2>Clothes for the life you're living.</h2><p>ATELIER is a fashion concept built around personal style, easy confidence and pieces worth reaching for again. Explore versatile clothing across everyday, occasion, ethnic and activewear edits.</p><a class="pill" style="display:inline-block;margin-top:18px" href="#collections">Explore all collections ↗</a></div><div class="story-visual reveal"><img loading="lazy" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=85" alt="Friends shopping fashion"><div class="story-stamp">Wear<br>what feels<br>like you.</div></div></section>
+<section class="newsletter" id="contact"><div class="eyebrow">Stay in the loop</div><h2>A little good style in your inbox.</h2><p>New drops, thoughtful edits and first access. No noise, promise.</p><form class="subscribe" id="subscribe"><input type="email" required placeholder="Your email address" aria-label="Your email address"><button>Sign me up ↗</button></form></section>
+</main><footer><div class="foot-top"><div class="foot-brand"><a class="logo" href="#home">ATELIER<span>.</span></a><p>Thoughtful fashion for everyday expression. Wear your own story.</p></div><div class="foot-col"><strong>Explore</strong><a href="#collections">Women</a><a href="#collections">Men</a><a href="#collections">Kids</a><a href="#collections">Accessories</a></div><div class="foot-col"><strong>Help</strong><a href="#contact">Contact us</a><a href="#contact">Shipping & returns</a><a href="#contact">Size guide</a><a href="#contact">FAQs</a></div><div class="foot-col"><strong>Follow along</strong><a href="#contact">Instagram ↗</a><a href="#contact">Pinterest ↗</a><a href="#contact">Facebook ↗</a></div></div><div class="foot-bottom"><span>© 2026 ATELIER. Demo storefront concept.</span><span>Privacy · Terms · Made for good style</span></div></footer>
+<div class="chat-panel" id="chatPanel"><div class="chat-head">ATELIER support <small>Typically replies within a few minutes</small></div><div class="chat-body"><p>Hey there! 👋 Welcome to ATELIER. Need help with sizing, orders or finding your style?</p></div><a class="chat-send" id="chatSend" href="#" target="_blank" rel="noopener">Chat on WhatsApp ↗</a></div><div class="wa"><span class="wa-label">Need a hand? Chat with us</span><button class="wa-btn" id="waToggle" aria-label="Open WhatsApp chat">◔</button></div><div class="toast" id="toast">Added to your bag ✓</div>
+<script>
+// DEMO NOTE: replace this number with the store owner's WhatsApp number, including country code.
+const WHATSAPP_NUMBER='919999999999';
+const panel=document.getElementById('chatPanel');document.getElementById('waToggle').addEventListener('click',()=>panel.classList.toggle('open'));
+document.getElementById('chatSend').href='https://wa.me/'+WHATSAPP_NUMBER+'?text='+encodeURIComponent('Hi ATELIER! I would like to know more about your collection.');
+document.getElementById('menu').addEventListener('click',()=>document.getElementById('navlinks').classList.toggle('open'));
+let bag=0;const toast=document.getElementById('toast');document.querySelectorAll('.quick').forEach(btn=>btn.addEventListener('click',()=>{bag++;document.getElementById('bagCount').textContent=bag;toast.textContent=btn.dataset.name+' added to your bag ✓';toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2200)}));
+document.querySelectorAll('.filter').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('.product').forEach(card=>{card.style.display=btn.dataset.filter==='all'||card.dataset.category===btn.dataset.filter?'':'none'})}));
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const hero=document.getElementById('heroImage'),photo=document.getElementById('heroPhoto');window.addEventListener('scroll',()=>{let r=hero.getBoundingClientRect();if(r.bottom>0&&r.top<innerHeight){let shift=Math.max(-45,Math.min(0,r.top*.10));photo.style.transform=`translateY(${shift}px) scale(1.04)`}} ,{passive:true});
+document.getElementById('subscribe').addEventListener('submit',e=>{e.preventDefault();toast.textContent='Thanks for subscribing! ✓';toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2500);e.target.reset()});
+</script><div class="fx-progress" id="fxProg"></div><div class="fx-cursor" id="fxDot"></div><div class="fx-ring" id="fxRing"></div><script id="fx-script">
+(() => {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const edit = document.querySelector('#edit');
+  const track = document.querySelector('.fx-track');
+  const progress = document.querySelector('.fx-edit-prog i');
+
+  // Lightweight reveal: one observer, no per-element scroll animations.
+  if (!reduceMotion && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  } else {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+  }
+
+  // Horizontal gallery: native scrolling keeps touch, trackpads and phones smooth.
+  if (edit && track) {
+    const updateProgress = () => {
+      const max = track.scrollWidth - track.clientWidth;
+      if (progress) progress.style.transform = `scaleX(${max > 0 ? track.scrollLeft / max : 0})`;
+    };
+    track.addEventListener('scroll', updateProgress, { passive: true });
+    window.addEventListener('resize', updateProgress, { passive: true });
+
+    // Convert vertical wheel input into horizontal gallery movement on desktop.
+    edit.addEventListener('wheel', event => {
+      if (window.matchMedia('(max-width: 850px)').matches || Math.abs(event.deltaY) < Math.abs(event.deltaX)) return;
+      const max = track.scrollWidth - track.clientWidth;
+      const canMove = event.deltaY > 0 ? track.scrollLeft < max - 1 : track.scrollLeft > 1;
+      if (canMove) {
+        event.preventDefault();
+        track.scrollLeft += event.deltaY;
+      }
+    }, { passive: false });
+
+    updateProgress();
+  }
+
+  // Small, inexpensive pointer effect on large screens only.
+  if (!reduceMotion && window.matchMedia('(hover:hover) and (pointer:fine)').matches) {
+    document.querySelectorAll('.cat, .product-photo, .fx-frame').forEach(card => {
+      card.addEventListener('pointermove', event => {
+        const rect = card.getBoundingClientRect();
+        const x = (event.clientX - rect.left) / rect.width - 0.5;
+        const y = (event.clientY - rect.top) / rect.height - 0.5;
+        card.style.setProperty('--mx', `${x * 3}px`);
+        card.style.setProperty('--my', `${y * 3}px`);
+      }, { passive: true });
+      card.addEventListener('pointerleave', () => {
+        card.style.setProperty('--mx', '0px');
+        card.style.setProperty('--my', '0px');
+      }, { passive: true });
+    });
+  }
+})();
+</script></body></html>
